@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "puppeteer": "^21.6.1"
+  },
+  "name": "rpajounrney",
+  "description": "Starting this repo to record my RPA journey, as i need it for work . looking for a free RPA tool...",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shenyean/RPAjounrney.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shenyean/RPAjounrney/issues"
+  },
+  "homepage": "https://github.com/Shenyean/RPAjounrney#readme"
+}

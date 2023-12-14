@@ -1,15 +1,15 @@
 const puppeteer = require("puppeteer");
 async function main() {
   const password1 = "P@ssw0rd1234";
-for (let i = 261 ;i<=1000;i++){
-  const userEmail = `A9-20${String(i).padStart(4,'0')}@mail.com`  
-}
+  // for (let i = 261 ;i<=1000;i++){
+  //   const userEmail = `A9-20${String(i).padStart(4,'0')}@mail.com`
+  // }
   const browser = await puppeteer.launch({ headless: false });
   const page = await browser.newPage();
-  //   await page.setViewport({
-  //     width: 1920,
-  //     height: 1080,
-  //   });
+  // await page.setViewport({
+  //   width: 1920,
+  //   height: 1080,
+  // });
   await page.goto(
     "https://br.uat.sg.rhapsode.com/learner.html?s=mBXe35EWKR0XyIzXPRVU3Mjb4pGZvRXc"
   );
@@ -19,24 +19,25 @@ for (let i = 261 ;i<=1000;i++){
   await page.waitForSelector("#sign_in");
   console.log("login loaded");
   await page.click('[name="username"]');
-  await page.type('[name="username"]', "A9-200104@area9.dk");
+  await page.type('[name="username"]', "A9-200107@area9.dk");
   await page.click('[name="password"]');
   await page.type('[name="password"]', password1);
   await page.click("#sign_in");
   // comment out cos these only appear once
-  await page.waitForSelector('[aria-label="CONTINUE"]');
-  await page.click('[aria-label="CONTINUE"]');
-  await page.waitForSelector('[aria-label="ACCEPT"]');
-  await page.click('[aria-label="ACCEPT"]');
-  console.log('accepts')
+  // await page.waitForSelector('[aria-label="CONTINUE"]');
+  // await page.click('[aria-label="CONTINUE"]');
+  // await page.waitForSelector('[aria-label="ACCEPT"]');
+  // await page.click('[aria-label="ACCEPT"]');
+  // console.log('accepts')
   await page.waitForSelector('[aria-label="GOT IT"]');
   await page.click('[aria-label="GOT IT"]');
   console.log("got it");
-  //  await new Promise((resolve) => setTimeout(resolve, 5000));
+  await new Promise((resolve) => setTimeout(resolve, 5000));
   await page.waitForSelector('[aria-label="LOAD TEST 001"]');
   await page.click('[aria-label="LOAD TEST 001"]');
-  await page.waitForSelector('[aria-label="OK"]');
-  await page.click('[aria-label="OK"]');
+  // await page.waitForSelector('[aria-label="OK"]');
+  // await page.click('[aria-label="OK"]');
+  console.log("first pdf");
   await page.waitForSelector('[aria-label="Your self confidence : I KNEW"]');
   await page.click('[aria-label="Your self confidence : I KNEW"]');
   console.log("enter slide");
@@ -49,16 +50,16 @@ for (let i = 261 ;i<=1000;i++){
   await page.click('[aria-label="Your self confidence : I KNEW"]');
 
   await new Promise((resolve) => setTimeout(resolve, 5000));
-  for (let i = 0 ;i<17 ; i++){
-    
-    await page.mouse.click(642,360)
+  for (let i = 0; i < 35; i++) {
+    await page.mouse.click(663, 372);
     await new Promise((resolve) => setTimeout(resolve, 1000));
+    console.log("click" + i);
   }
-  await page.mouse.click (674,368)
-  await page.waitForSelector('[aria-label="NEXT"]')
-  await page.click('[aria-label="NEXT"]')
-  await page.waitForSelector('[aria-label="NEXT"]')
-  await page.click('[aria-label="NEXT"]')
- 
+  // await page.mouse.click(641, 480);
+  // await page.waitForSelector('[aria-label="NEXT"]');
+  // await page.click('[aria-label="NEXT"]');
+  // await page.waitForSelector('[aria-label="NEXT"]');
+  // await page.click('[aria-label="NEXT"]');
+  // console.log("where are we?");
 }
 main();

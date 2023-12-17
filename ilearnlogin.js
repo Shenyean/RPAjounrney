@@ -1,7 +1,7 @@
 const puppeteer = require("puppeteer");
 async function main() {
   
- for (let i = 695 ;i<=1000;i++){
+ for (let i = 995 ;i<=1000;i++){
     const userEmail = `A9-20${String(i).padStart(4,'0')}@area9.dk` 
     const password1 = "P@ssw0rd1234";
     const browser = await puppeteer.launch({ headless: false });

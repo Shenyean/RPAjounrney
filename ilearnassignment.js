@@ -52,7 +52,7 @@ for (let i = 1 ;i<=1000;i++){
 //   for (let i = 0 ;i<17 ; i++){
     
 //     await page.mouse.click(642,360)
-//     await new Promise((resolve) => setTimeout(resolve, 1000));
+//    
 //   }
 //   await page.mouse.click (674,368)
 //   await page.waitForSelector('[aria-label="NEXT"]')
@@ -60,5 +60,5 @@ for (let i = 1 ;i<=1000;i++){
 //   await page.waitForSelector('[aria-label="NEXT"]')
 //   await page.click('[aria-label="NEXT"]')
  
-// }
+}
 main();

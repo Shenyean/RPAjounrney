@@ -11,12 +11,14 @@ async function main() {
     height: 1080,
   });
 
-  for (let i = 4685; i <= 4800; i += 4) {
+  for (let i = 4600; i <= 4800; i++) {
     //const ownerEmail = `loadtestuser004601@mail.com`;
-    const ownerEmail = `loadtestuser${String(i).padStart(6, "0")}@mail.com`;
+
+    const ownerEmail = `A9-20${String(i).padStart(4, "0")}@area9.dk`;
+
     const password1 = "P@ssw0rd1234";
     await page.goto(
-      "https://ilearn.learnsaf.gov.sg/educator.html?s=ShjMjhGcfNzNzIzXy5ETEVVU14GbkVXc"
+      "https://br.uat.sg.rhapsode.com/educator.html?s=mBXe35EWKR0XyIzXPRVU3Mjb4pGZvRXc"
     );
     await new Promise((resolve) => setTimeout(resolve, 5000));
     await page.waitForSelector('[name="username"]');
@@ -27,8 +29,10 @@ async function main() {
     await page.click('[name="password"]');
     await page.type('[name="password"]', password1);
     await page.click("#sign_in");
+    await new Promise((resolve) => setTimeout(resolve, 500));
     await page.waitForSelector('[aria-label="ADD CLASS"]');
     await page.click('[aria-label="ADD CLASS"]');
+    await new Promise((resolve) => setTimeout(resolve, 500));
     await page.waitForSelector('[aria-label="Name"]');
     await new Promise((resolve) => setTimeout(resolve, 1000));
     await page.click('[aria-label="Name"]');
@@ -45,38 +49,6 @@ async function main() {
     await page.click('[aria-label = "Home Page"]');
     await new Promise((resolve) => setTimeout(resolve, 3000));
 
-    for (let j = 1; j <= 3; j++) {
-      const learnerEmail = `LoadTester${String(i + j).padStart(6, "0")}`;
-
-      console.log("learner " + learnerEmail);
-      await page.waitForSelector('[aria-label = "person_add"]');
-      await page.click('[aria-label = "person_add"]');
-      console.log("Person ready to be added");
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      await page.waitForSelector('[aria-label = "add"]');
-
-      await page.click('[aria-label = "add"]');
-      await page.keyboard.press("Tab");
-      await page.keyboard.press("Enter");
-      console.log("clicked on add");
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      await page.waitForSelector('[aria-label = "User Userid"]');
-      await page.click('[aria-label = "User Userid"]');
-      await page.type('[aria-label = "User Userid"]', learnerEmail);
-      await page.keyboard.press("ArrowDown");
-      await page.keyboard.press("Enter");
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      await page.waitForSelector('[aria-label = "Switch Control"]');
-      await page.keyboard.press("Tab");
-      await page.keyboard.press("Tab");
-      await page.keyboard.press("Tab");
-      await page.keyboard.press("Enter");
-      await page.waitForSelector('[aria-label = "GRANT"]');
-      await page.click('[aria-label = "GRANT"]');
-    }
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    await page.waitForSelector('[aria-label = "CLOSE"]');
-    await page.click('[aria-label = "CLOSE"]');
     await new Promise((resolve) => setTimeout(resolve, 2000));
     await page.waitForSelector('[aria-label = "Show Menu"]');
     await page.click('[aria-label = "Show Menu"]');

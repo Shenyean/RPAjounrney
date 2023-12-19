@@ -11,7 +11,7 @@ async function main() {
     height: 1080,
   });
 
-  for (let i = 4600; i <= 4800; i++) {
+  for (let i = 4658; i <= 4800; i++) {
     //const ownerEmail = `loadtestuser004601@mail.com`;
 
     const ownerEmail = `A9-20${String(i).padStart(4, "0")}@area9.dk`;
@@ -41,7 +41,7 @@ async function main() {
     await page.click('[aria-label = "Create Forum"]');
     await page.click('[aria-label = "Allow Learners to Discover Each Other"]');
     await page.click('[aria-label = "SAVE"]');
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 2000));
     await page.waitForSelector('[aria-label = "Show Menu"]');
     await page.click('[aria-label = "Show Menu"]');
     await new Promise((resolve) => setTimeout(resolve, 1000));
@@ -56,6 +56,7 @@ async function main() {
     await page.waitForSelector('[aria-label = "LOGOUT"]');
     await page.click('[aria-label = "LOGOUT"]');
     await new Promise((resolve) => setTimeout(resolve, 10000));
+    console.log("educator" + i);
   }
 }
 

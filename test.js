@@ -11,18 +11,22 @@
 //     }
 
 //   }
-// //}
-let learnerList = [];
-for (let i = 447; i <= 496; i++) {
-  // add student 000001 -000050 in first class
-  let y = i - 447;
+// // //}
+// let learnerList = [];
+// for (let i = 447; i <= 496; i++) {
+//   // add student 000001 -000050 in first class
+//   let y = i - 447;
 
-  for (let j = 1; j <= 92; j++) {
-    const userEmail = `A9-20${String(y * 92 + j).padStart(4, "0")}@area9.dk`;
-    //console.log(userEmail);
-    learnerList.push(userEmail);
-  }
+//   for (let j = 1; j <= 92; j++) {
+//     const userEmail = `A9-20${String(y * 92 + j).padStart(4, "0")}@area9.dk`;
+//     //console.log(userEmail);
+//     learnerList.push(userEmail);
+//   }
 
-  console.log(JSON.stringify(learnerList));
-  learnerList = [];
+//   console.log(JSON.stringify(learnerList));
+//   learnerList = [];
+// }
+for (let i = 1183; i <= 5000; i++) {
+  const userEmail = `A9-20${String(i).padStart(4, "0")}@area9.dk`;
+  console.log(userEmail);
 }

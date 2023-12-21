@@ -13,7 +13,7 @@ async function main() {
 
   for (let i = 4685; i <= 4800; i += 4) {
     //const ownerEmail = `loadtestuser004601@mail.com`;
-    const ownerEmail = `loadtestuser${String(i).padStart(6, "0")}@mail.com`;
+    const ownerEmail = ;
     const password1 = "P@ssw0rd1234";
     await page.goto(
       "https://ilearn.learnsaf.gov.sg/educator.html?s=ShjMjhGcfNzNzIzXy5ETEVVU14GbkVXc"

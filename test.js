@@ -27,6 +27,8 @@
 //   learnerList = [];
 // }
 for (let i = 1183; i <= 5000; i++) {
-  const userEmail = `A9-20${String(i).padStart(4, "0")}@area9.dk`;
-  console.log(userEmail);
+  //const userEmail = `A9-20${String(i).padStart(4, "0")}@area9.dk`;
+  console.log(
+    `https://ilearn.learnsaf.gov.sg/curator.html?s=6x2aqh2ZmR2X3MzXzFGcvlWd5RncldXc#modules&project=14&subject=17&module_page=${i}`
+  );
 }

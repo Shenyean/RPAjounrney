@@ -7,35 +7,6 @@ async function main() {
     width: 1920,
     height: 1080,
   });
-<<<<<<< HEAD
-  //362
-  for (let i = 1045; i <= 5000; i++) {
-    const userEmail = `A9-20${String(i).padStart(4, "0")}@area9.dk`;
-    await page.goto(
-      "https://br.uat.sg.rhapsode.com/learner.html?s=mBXe35EWKR0XyIzXPRVU3Mjb4pGZvRXc"
-    );
-    await page.waitForSelector('[name="username"]');
-    await page.waitForSelector('[name="password"]');
-    await page.waitForSelector("#sign_in");
-    console.log("login loaded");
-    await page.click('[name="username"]');
-    await page.type('[name="username"]', userEmail);
-    await page.click('[name="password"]');
-    await page.type('[name="password"]', password1);
-    await page.click("#sign_in");
-
-    // comment out cos these only appear once
-    await page.waitForSelector('[aria-label="CONTINUE"]');
-    await page.click('[aria-label="CONTINUE"]');
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    await page.waitForSelector('[aria-label="ACCEPT"]');
-    await page.click('[aria-label="ACCEPT"]');
-    console.log("accepts");
-    // await page.waitForSelector('[aria-label = "Show Menu"]');
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    const buttonSelector = `button[aria-label="GOT IT"]`;
-=======
-
   for (let i = 1585; i <= 5000; i++) {
     try {
       const userEmail = `A9-20${String(i).padStart(4, "0")}@area9.dk`;
@@ -65,7 +36,6 @@ async function main() {
           await button1.click();
         } else {
           console.log("no continue button");
->>>>>>> 56041d66e7b5f36c421e7332516780ab4d26aae1
 
           await new Promise((resolve) => setTimeout(resolve, 2000));
         }

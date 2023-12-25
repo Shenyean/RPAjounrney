@@ -8,7 +8,7 @@ async function main() {
     height: 1080,
   });
 
-  for (let i = 1585; i <= 5000; i++) {
+  for (let i = 2005; i <= 5000; i++) {
     try {
       const userEmail = `A9-20${String(i).padStart(4, "0")}@area9.dk`;
       console.log(userEmail);
@@ -144,6 +144,9 @@ async function main() {
       console.log(userEmail + "done");
     } catch (err) {
       console.log(`this ${i} is down`);
+      await browser.close();
+      const browser = await puppeteer.launch({ headless: false });
+      const page = await browser.newPage();
     }
   }
 }

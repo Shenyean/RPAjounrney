@@ -2,7 +2,7 @@ const puppeteer = require("puppeteer");
 async function main() {
   const password1 = "Bekg!4081988";
   const browser = await puppeteer.launch({
-    headless: false,
+    headless: true,
     protocolTimeout: 50000,
   });
   const page = await browser.newPage();
